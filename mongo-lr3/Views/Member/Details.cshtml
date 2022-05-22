@@ -1,0 +1,14 @@
+﻿@model mongo_lr3.Models.Member
+
+@{
+
+}
+
+<div class="col-8">
+    @if(Model.HasImage()) {
+        <img class="img-fluid img-thumbnail" src=@Url.Action("GetImage", new {id = @Model.ImageId}) />
+    }
+    <p>Name: <span>@Model.Name</span></p>
+    <p>Age: <span>@Model.Age</span></p>
+    <a href="/member">Back</a>
+</div>
